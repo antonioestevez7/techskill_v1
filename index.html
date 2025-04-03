@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechSkill Buscador de Simuladores RV/RA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/techskill_icono.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/techskill_icono.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/techskill_icono.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/techskill_icono.png">
+<!--icono redes-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+  <div class="header-wrapper">
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-theme" />
+        <span class="slider">
+          <span class="icon sol">☀️</span>
+          <span class="icon luna">🌙</span>
+        </span>
+      </label>
+      <span class="modo-label">Modo claro</span>
+    </div>
+
+    <div class="header-content">
+  <img src="img/techskill-imagen.png" alt="TechSkill Logo" class="logo-header" />
+  <div class="texto-header">
+    <h1>Buscador de Simuladores de Realidad Virtual y Aumentada</h1>
+    <p class="subtitulo">Filtra por sector para encontrar soluciones inmersivas adaptadas a la industria</p>
+  </div>
+</div>
+
+
+  </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+  <section class="buscador">
+  <div class="search-wrapper">
+    <i class="fas fa-search"></i>
+    <input type="text" id="filtro" placeholder="Buscar simuladores, empresas, tecnologías..." />
+  </div>
+</section>
+
+<div id="mensaje-no-resultados" class="mensaje-no-resultados" style="display: none;">
+  🔍 No se encontraron simuladores para "<span id="texto-buscado"></span>"
+</div>
+
+  <main id="sectores">
+
+    <!-- Soldadura y Pintura -->
+    <section class="sector soldadura">
+      <h2>Soldadura y Pintura</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+        <article class="simulador" data-keywords="soldadura realidad virtual mig mag ludus">
+        <a href="#" target="_blank" class="simulador-link">
+        <div class="contenido-simulador">
+      <h3>Ludus Soldadura VR</h3>
+      <p><strong>Empresa:</strong> Ludus Tech</p>
+      <p>Simulador para prácticas de soldadura MIG/MAG con evaluación en tiempo real.</p>
+        </div>
+      </a>
+      </article>
+          <article class="simulador" data-keywords="soldadura tig electrodo simulador taller immersive">
+          <a href="#" target="_blank" class="simulador-link">
+          <div class="contenido-simulador">
+          <h3>WeldEasy Pro</h3>
+            <p><strong>Empresa:</strong> SimuTech Industries</p>
+            <p>Entrenamiento virtual para soldadura TIG y electrodo, con escenarios realistas de taller.</p>
+          </div>
+          </a>
+          </article>
+          <article class="simulador" data-keywords="soldadura arco electrico industrial formacion">
+          <a href="#" target="_blank" class="simulador-link">
+          <div class="contenido-simulador">
+          <h3>ARC Trainer</h3>
+            <p><strong>Empresa:</strong> XRWork</p>
+            <p>Simulación para formación técnica en soldadura por arco eléctrico en entornos industriales.</p>
+          </div>
+          </a>
+          </article>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn left">&#8249;</button>
+          <button class="carousel-btn right">&#8250;</button>
+        </div>
+        <div class="carousel-indicators"></div>
+      </div>
+    </section>
+
+      <!-- Mecánica, Metal y Fabricación Industrial -->
+      <section class="sector mecanica">
+  <h2>Mecánica, Metal y Fabricación Industrial</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <a href="#" class="simulador-link">
+        <article class="simulador" data-keywords="mecanizado fresadora torno cnc realidad virtual industria">
+          <h3>Simulador CNC VR</h3>
+          <p><strong>Empresa:</strong> VRMecanics</p>
+          <p>Entrenamiento seguro en operaciones de fresado y torno industrial en RV.</p>
+        </article>
+      </a>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn left">&#8249;</button>
+      <button class="carousel-btn right">&#8250;</button>
+    </div>
+    <div class="carousel-indicators"></div>
+  </div>
+</section>
+
+    <!-- Robótica, Automatización y Electricidad -->
+    <section class="sector robotica">
+  <h2>Robótica, Automatización y Electricidad</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <a href="#" class="simulador-link">
+        <article class="simulador" data-keywords="robotica automatizacion electricidad plc siemens programacion">
+          <h3>Simulador de PLC Interactivo</h3>
+          <p><strong>Empresa:</strong> Siemens XR</p>
+          <p>Plataforma inmersiva para programar y probar sistemas PLC en entornos simulados.</p>
+        </article>
+      </a>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn left">&#8249;</button>
+      <button class="carousel-btn right">&#8250;</button>
+    </div>
+    <div class="carousel-indicators"></div>
+  </div>
+</section>
+
+    <!-- Logística y Construcción -->
+    <section class="sector logistica">
+  <h2>Logística y Construcción</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <a href="#" class="simulador-link">
+        <article class="simulador" data-keywords="logistica construccion carretilla almacen elevadora realidad virtual">
+          <h3>LogistiVR</h3>
+          <p><strong>Empresa:</strong> ImmersiveLogix</p>
+          <p>Simulador de carretillas elevadoras y operaciones logísticas en almacén.</p>
+        </article>
+      </a>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn left">&#8249;</button>
+      <button class="carousel-btn right">&#8250;</button>
+    </div>
+    <div class="carousel-indicators"></div>
+  </div>
+</section>
+
+
+    <!-- Sanidad y Emergencias -->
+    <section class="sector sanidad">
+  <h2>Sanidad y Emergencias</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <!-- Actualmente no hay simuladores en esta categoría -->
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn left">&#8249;</button>
+      <button class="carousel-btn right">&#8250;</button>
+    </div>
+    <div class="carousel-indicators"></div>
+  </div>
+</section>
+
+
+    <!-- Energías Renovables -->
+    <section class="sector renovables">
+      <h2>Energías Renovables</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+     
+
+<article class="simulador" data-keywords="rewoox energías renovables realidad virtual formación Rewoox">
+  <a href="https://www.rewoox.es/servicios/entrenadores-virtuales/" target="_blank" class="simulador-link">
+    <div class="contenido-simulador">
+      <h3>Entrenador Virtual en Energías Renovables</h3>
+      <p><strong>Empresa:</strong> Rewoox</p>
+      <p>Simulador en realidad virtual diseñado para la formación en procesos relacionados con las energías renovables</p>
+    </div>
+  </a>
+</article>
+        <article class="simulador" data-keywords="energia renovable paneles solares eolica mantenimiento green">
+        <a href="#" target="_blank" class="simulador-link">
+        <div class="contenido-simulador">
+        <h3>RenewVR</h3>
+            <p><strong>Empresa:</strong> GreenXR Solutions</p>
+            <p>Simulación de instalación y mantenimiento de paneles solares y turbinas eólicas.</p>
+          </div>
+          </a>
+          </article>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn left">&#8249;</button>
+          <button class="carousel-btn right">&#8250;</button>
+        </div>
+        <div class="carousel-indicators"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <span>&copy; 2025 TechSkill</span>
+    <div class="social-links">
+      <a href="https://es.linkedin.com/company/techskill-consulting-sl" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/techskill_consulting/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://techskill.es/contact/" aria-label="Correo">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.youtube.com/@techskill-om2mh/videos" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+    
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
