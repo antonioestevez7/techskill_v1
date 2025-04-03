@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  
+  
+
   const resetearCarrusel = (sector) => {
     const track = sector.querySelector('.carousel-track');
     if (track) {

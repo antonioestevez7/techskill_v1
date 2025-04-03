@@ -144,7 +144,6 @@ header h1 {
   width: auto;
   max-width: 160px;
   object-fit: contain;
-  float: none !important;
 }
 
 .texto-header h1 {
@@ -315,7 +314,7 @@ header h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin-bottom: 1.5rem;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     word-wrap: break-word;
   }
   
@@ -430,12 +429,12 @@ header h1 {
     overflow: hidden;
   }
   
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-    align-items: stretch;
+ .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  align-items: stretch;
+  justify-content: flex-start; /* <- este es el valor por defecto */
 }
-  
   
   
   .carousel-track .simulador {
@@ -704,24 +703,20 @@ input:checked + .slider::before {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .header-content.movil {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .logo-header {
-    margin-bottom: 1rem !important;
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    height: 200px;
+    margin-bottom: 1rem;
   }
 
-  .texto-header {
-    text-align: center !important;
+  .texto-header h1 {
+    font-size: 1.4rem;
   }
-
-
 
   .subtitulo {
     font-size: 1rem;
