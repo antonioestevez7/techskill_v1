@@ -230,35 +230,29 @@ document.querySelectorAll('.carousel').forEach(carousel => {
   }
 });
 
-// 🌗 MODO CLARO / OSCURO con texto
+// 🌗 Detectar el modo del sistema automáticamente en cada carga
 const toggle = document.getElementById("toggle-theme");
 const body = document.body;
 const label = document.querySelector(".modo-label");
 
-// Cargar el tema guardado
-if (localStorage.getItem("modo") === "oscuro") {
+// Detectar si el sistema prefiere oscuro
+const prefiereOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (prefiereOscuro) {
   body.classList.add("dark-mode");
   toggle.checked = true;
   label.textContent = "Modo claro";
 } else {
+  body.classList.remove("dark-mode");
+  toggle.checked = false;
   label.textContent = "Modo oscuro";
 }
 
-// Cambiar al hacer clic
+// Al hacer clic, solo cambia visualmente (no se guarda)
 toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    body.classList.add("dark-mode");
-    localStorage.setItem("modo", "oscuro");
-    label.textContent = "Modo claro";
-  } else {
-    body.classList.remove("dark-mode");
-    localStorage.setItem("modo", "claro");
-    label.textContent = "Modo oscuro";
-  }
-
-
-
-  
+  body.classList.toggle("dark-mode");
+  const esOscuro = body.classList.contains("dark-mode");
+  label.textContent = esOscuro ? "Modo claro" : "Modo oscuro";
 });
 
 
